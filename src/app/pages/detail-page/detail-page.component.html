@@ -1,0 +1,179 @@
+<div class="top-dropdown">
+    <div class="fixed-width">
+        <cds-dropdown
+            label="Data Sourcing Group"
+            [hideLabel]="false"
+            helperText="test"
+            placeholder="Select"
+            [disabled]="false"
+            [readonly]="false"
+            [size]="'md'"
+            >
+            <cds-dropdown-list [items]="items"></cds-dropdown-list>
+        </cds-dropdown>
+    </div>
+</div>
+<div class="container">
+    <div class="heading">
+        <div>Configure Objects</div>
+        <button [cdsButton]="'primary'" [size]="'sm'" [isExpressive]="false" [disabled]="false" [iconOnly]="false"
+            (click)="onAddButtonClick($event)">
+            Enable Editing
+            <svg class="cds--btn__icon" cdsIcon="add" size="16"></svg>
+        </button>
+    </div>
+    <div class="content-main">
+        <div class="col-4">
+            <div class="object-add">
+                <button [cdsButton]="'primary'" [size]="'lg'" [isExpressive]="false" [disabled]="false" [iconOnly]="true"
+                    (click)="onAddButtonClick($event)">
+                    <svg class="cds--btn__icon" cdsIcon="add" size="16"></svg>
+                </button>
+            </div>
+            <cds-contained-list label="Object Name">
+                <cds-contained-list-item>Object 1</cds-contained-list-item>
+                <cds-contained-list-item>Object 2</cds-contained-list-item>
+                <cds-contained-list-item>Object 3</cds-contained-list-item>
+                <cds-contained-list-item>Object 4</cds-contained-list-item>
+              </cds-contained-list>
+        </div>
+        <div class="col-12">
+            <cds-tabs
+            [type]="'line'"
+            [followFocus]="true"
+            [isNavigation]="true"
+            [cacheActive]="false"
+            >
+            <cds-tab heading="Key Pattern" [tabContent]="keypattern"></cds-tab>
+            <cds-tab heading="Attributes" [tabContent]="attributes"></cds-tab>
+            </cds-tabs>
+
+            <!-- Use templates if you would like to have lifecycle hooks called when cacheActive is false -->
+            <ng-template #keypattern>
+                <div class="div-items">
+                    <div class="item-left">
+                        <cds-text-label [helperText]="'helperText'">
+                            Key Name
+                            <input cdsText type="text" class="input-field">
+                        </cds-text-label>
+                    </div>
+                    <div class="item-right">
+                        <cds-dropdown
+                            label="Key Type"
+                            [hideLabel]="false"
+                            helperText="test"
+                            placeholder="Select Type"
+                            [disabled]="false"
+                            [readonly]="false"
+                            [size]="'md'"
+                            >
+                            <cds-dropdown-list [items]="keyType"></cds-dropdown-list>
+                        </cds-dropdown>
+                    </div>
+                </div>
+                <div class="div-items">
+                    <div class="item-left">
+                        <cds-text-label [helperText]="'helperText'">
+                            Key Name
+                            <input cdsText type="text" class="input-field">
+                        </cds-text-label>
+                    </div>
+                    <div class="item-right">
+                        <cds-dropdown
+                            label="Key Type"
+                            [hideLabel]="false"
+                            helperText="test"
+                            placeholder="Select Type"
+                            [disabled]="false"
+                            [readonly]="false"
+                            [size]="'md'"
+                            >
+                            <cds-dropdown-list [items]="keyType"></cds-dropdown-list>
+                        </cds-dropdown>
+                    </div>
+                </div>
+                <div class="add-button">
+                    <button
+                        [cdsButton]="'primary'"
+                        [size]="'md'"
+                        [isExpressive]="false"
+                        [disabled]="false"
+                        [iconOnly]="true"
+                        (click)="onAddButtonClick($event)">
+                        <svg class="cds--btn__icon" cdsIcon="add" size="16"></svg>
+                    </button>
+                </div>
+            </ng-template>
+
+            <ng-template #attributes>
+                <div class="div-items">
+                    <div class="item-left">
+                        <cds-text-label [helperText]="'helperText'">
+                            Attribute Name
+                            <input cdsText type="text" class="input-field">
+                        </cds-text-label>
+                    </div>
+                    <div class="item-right">
+                        <cds-text-label [helperText]="'helperText'">
+                            Attribute Label
+                            <input cdsText type="text" class="input-field">
+                        </cds-text-label>
+                    </div>
+                </div>
+                <div class="div-items">
+                    <div class="item-left">
+                        <cds-text-label [helperText]="'helperText'">
+                            Attribute Name
+                            <input cdsText type="text" class="input-field">
+                        </cds-text-label>
+                    </div>
+                    <div class="item-right">
+                        <cds-text-label [helperText]="'helperText'">
+                            Attribute Label
+                            <input cdsText type="text" class="input-field">
+                        </cds-text-label>
+                    </div>
+                </div>
+                <div class="div-items">
+                    <div class="item-left">
+                        <cds-text-label [helperText]="'helperText'">
+                            Attribute Name
+                            <input cdsText type="text" class="input-field">
+                        </cds-text-label>
+                    </div>
+                    <div class="item-right">
+                        <cds-text-label [helperText]="'helperText'">
+                            Attribute Label
+                            <input cdsText type="text" class="input-field">
+                        </cds-text-label>
+                    </div>
+                </div>
+                <div class="div-items">
+                    <div class="item-left">
+                        <cds-text-label [helperText]="'helperText'">
+                            Attribute Name
+                            <input cdsText type="text" class="input-field">
+                        </cds-text-label>
+                    </div>
+                    <div class="item-right">
+                        <cds-text-label [helperText]="'helperText'">
+                            Attribute Label
+                            <input cdsText type="text" class="input-field">
+                        </cds-text-label>
+                    </div>
+                </div>
+                <div class="add-button">
+                    <button
+                        [cdsButton]="'primary'"
+                        [size]="'md'"
+                        [isExpressive]="false"
+                        [disabled]="false"
+                        [iconOnly]="false"
+                        (click)="onAddButtonClick($event)">
+                        Retrieve Attributes from API <svg class="cds--btn__icon" cdsIcon="add" size="16"></svg>
+                    </button>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

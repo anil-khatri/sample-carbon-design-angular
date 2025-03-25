@@ -1,0 +1,50 @@
+.top-dropdown {
+    .fixed-width {
+        width: 25%;
+    }
+}
+.container {
+    .heading {
+        background-color: grey;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        div {
+            padding: 7px 0;
+            font-weight: bold;
+        }
+    }
+    .content-main {
+        display: flex;
+        justify-content: space-between;
+        .col-4 {
+            width: 25%;
+            position: relative;
+            .object-add {
+                position: absolute;
+                right: 10px;
+                z-index: 100;
+            }
+        }
+        .col-12 {
+            width: 74%;
+        }
+    }
+}
+
+.div-items {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 30px;
+    .item-left {
+        width: 45%;
+    }
+    .item-right {
+        width: 45%;
+    }
+}
+
+.add-button {
+    margin-top: 20px;
+}
